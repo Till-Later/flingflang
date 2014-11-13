@@ -2,6 +2,6 @@
 	$username = "root";
 	$password = "";
 	$host = "localhost";
-	$database = "flingflang";
+	$database = "flingflang_db";
 	
 ?>
