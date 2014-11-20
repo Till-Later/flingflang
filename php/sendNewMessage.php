@@ -14,7 +14,7 @@
 		die();
 	}	
 	
-	$abfrage="INSERT INTO Nachricht (ID_Chat, Zeit, Nachrichtentext, ID_Sender) VALUES((SELECT ID FROM Chat WHERE (ID_user1 =  $sender AND ID_user2 = $reciever) OR (ID_user1 = $reciever AND ID_user2 = $sender)), NOW(), '$text', $sender);";
+	$abfrage="INSERT INTO Nachricht (ID_Chat, Zeit, Nachrichtentext, ID_Sender, requested) VALUES((SELECT ID FROM Chat WHERE (ID_user1 =  $sender AND ID_user2 = $reciever) OR (ID_user1 = $reciever AND ID_user2 = $sender)), NOW(), '$text', $sender, 0);";
 				
 	$ergebnis = mysql_query($abfrage);
 	

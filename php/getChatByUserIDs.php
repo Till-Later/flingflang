@@ -22,7 +22,7 @@
 	} else {
 	
 		
-	$abfrage="SELECT Nachrichtentext, ID_user1 
+	$abfrage="SELECT Nachrichtentext, ID_Sender 
 				FROM Chat 
 				JOIN Nachricht ON Chat.ID = Nachricht.ID_Chat
 				WHERE (ID_user1 = $user1 AND ID_user2 = $user2) OR (ID_user1 = $user2 AND ID_user2 = $user1)
@@ -33,7 +33,7 @@
 	
 	while( $row = mysql_fetch_object($ergebnis) )
 	{
-		 echo $row->ID_user1."|".$row->Nachrichtentext."|";				
+		 echo $row->ID_Sender."|".$row->Nachrichtentext."|";				
 
 	}	
 	}
